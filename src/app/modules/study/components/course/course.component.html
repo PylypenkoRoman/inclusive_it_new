@@ -1,0 +1,48 @@
+<section class="course">
+  <div class="course__container container">
+    <div class="course__breadcrumbs">
+      <a [routerLink]="['/study']" class="course__breadcrumbs-item link">Навчання</a>
+      <span class="course__breadcrumbs-item">{{currentCourse.title}}</span>
+    </div>
+    <h1 class="course__title">{{currentCourse.title}}</h1>
+    <p class="course__description">{{currentCourse.description}}</p>
+    <ul class="course__modules">
+      <li *ngFor="let module of currentCourse.modules; let index = index;" class="course__module-item">
+        <span class="course__module-label">Модуль {{index+1}}</span>
+        <div class="course__module-text">
+          <p *ngFor="let topic of module" class="course__module-topics">{{topic}}</p>
+        </div>
+      </li>
+    </ul>
+    <div class="course__results" *ngIf="currentCourse.results.length">
+      <div class="course__results-label">
+        Добре, що в результаті?
+        <svg width="33px" height="24px" viewBox="0 0 33 24">
+          <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+          <g transform="translate(-1244.000000, -3123.000000)" fill="#222">
+          <path d="M1255,3123c0,0-0.7,5.7-2,8.8c-1.9,4.3-7.7,13.4-7.7,13.4s9.3-2.5,18-8.8c2.6-1.9,10.4-11,12.6-13.5"/>
+          </g>
+          </g>
+        </svg>
+      </div>
+      <ul class="course__results-list">
+        <svg width="33px" height="24px" viewBox="0 0 33 24">
+          <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+          <g transform="translate(-1244.000000, -3123.000000)" fill="#eee">
+          <path d="M1275.13811,3123 C1272.95728,3125.43852 1265.08297,3134.61485 1262.52627,3136.47672 C1253.84354,3142.79977 1244.5,3145.28571 1244.5,3145.28571 C1244.5,3145.28571 1250.29058,3136.12799 1252.15133,3131.84682 C1253.51931,3128.69942 1254.18621,3123 1254.18621,3123" transform="translate(1259.819055, 3134.142857) scale(-1, 1) translate(-1259.819055, -3134.142857) ">
+          </path>
+          </g>
+          </g>
+        </svg>
+        <li
+          class="course__results-item"
+          *ngFor="let result of currentCourse.results">{{result}}
+         </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="contact-form container">
+  <iit-contact-form></iit-contact-form>
+</section>

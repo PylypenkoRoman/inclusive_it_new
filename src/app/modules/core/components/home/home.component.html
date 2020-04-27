@@ -1,0 +1,79 @@
+<section class="promo">
+  <div class="promo__container container">
+    <div class="promo__text-block">
+      <h1 class="promo__title">Ми створюємо доступний цифровий світ, в якому є місце кожному</h1>
+      <p class="promo__text">
+        Люди з інвалідністю тестують сайти
+        на відповідність міжнародним стандартам
+        доступності (WCAG 2.1 і Section 508)
+        та створюють рекомендації для виправлення
+        знайдених помилок.
+      </p>
+      <p class="promo__text">
+        Тренінги вебдоступності для команд та індивідів
+        усіх рівнів. Онлайн або офлайн.
+      </p>
+    </div>
+    <div class="promo__image-wrapper">
+      <img class="promo__image" src="../../../../../assets/images/circle_man_black.svg" alt="Зображена піктограмма людини, що означає інклюзивність">
+    </div>
+  </div>
+</section>
+
+<section class="accessibility">
+  <div class="accessibility__container container">
+    <h2 class="accessibility__title">Сервіси вебдоступності</h2>
+    <div class="accessibility__list">
+      <div class="accessibility__item" *ngFor="let item of accessibilityList">
+        <img [src]="item.image" alt="{{item.imageDescription}}" class="accessibility__image">
+        <h3 class="accessibility__sub-title">{{item.title}}</h3>
+        <p class="accessibility__text">{{item.text}}</p>
+        <a
+        class="accessibility__link"
+        *ngIf="item.readMoreLink.length"
+        [routerLink]="[item.readMoreLink]">
+        {{item.readMoreText}}
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="media">
+  <div class="media__container container">
+    <h2 class="media__title">Про нас пишуть медіа</h2>
+    <div class="media__list">
+      <div class="media__item" *ngFor="let item of media" >
+        <div class="media__image-wrapper">
+          <img class="media__image" [src]="item.image" alt="{{item.imageDescription}}" >
+        </div>
+        <div class="media__text-block">
+          <h3 class="media__sub-title">
+            <a [href]="item.readMoreLink">{{item.title}}</a>
+          </h3>
+          <p class="media__text">{{item.text}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="quote">
+  <div class="quote__container container">
+    <span class="quote__sign">“</span>
+    <p class="quote__text">Майбутнє за доступністю. Створюй його з нами</p>
+    <span class="quote__autor">— Inclusive IT</span>
+  </div>
+</section>
+
+<section class="contact-form container">
+  <iit-contact-form></iit-contact-form>
+</section>
+
+
+<section class="contacts">
+  <div class="contacts__container container">
+    <span class="contacts__text">axycat@inclusive-it.org</span>
+  </div>
+</section>

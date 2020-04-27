@@ -1,0 +1,40 @@
+<section class="info">
+  <div class="info__container container">
+    <div class="info__text-block">
+      <h1 class="info__title">Навчаємо вебдоступності</h1>
+      <p class="info__text">
+        Наші експерти розробили систему навчання,
+        в яку входять основні теми вебдоступності.
+        Ви можете обрати окремі сфокусовані модулі, або цілий курс.
+      </p>
+      <p class="info__text">
+        Тренінги розраховані на QA інженерів, front-end
+        & back-end розробників, контент-менеджерів, дизайнерів,
+        продуктових менеджерів та усіх, хто зацікавлений у темі вебдоступності.
+      </p>
+    </div>
+    <div class="info__image-wrapper">
+      <img class="info__image" src="../../../../../assets/images/people.svg" alt="Зображена піктограмма людини, що означає інклюзивність">
+    </div>
+  </div>
+</section>
+
+<section class="courses">
+  <div class="courses__container container">
+    <h2 class="courses__title">Курси та тренінги</h2>
+    <div class="courses__list">
+      <div class="courses__item" *ngFor="let item of courses">
+        <div class="courses__image-wrapper" >
+          <img class="courses__image" [src]="item.image" alt="">
+        </div>
+        <div class="courses__item-content">
+          <div class="courses__text-block">
+            <h3 class="courses__sub-title">{{item.title}}</h3>
+            <p class="courses__text">{{item.text}}</p>
+          </div>
+          <a class="courses__read-more-button" [routerLink]="['/study', item.link]" >Програма курсу</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

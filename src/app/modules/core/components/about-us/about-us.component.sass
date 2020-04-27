@@ -1,0 +1,80 @@
+@import '../../../../../assets/styles/variables'
+
+.jumbotron
+  background-color: #000
+  background-image: url(/assets/images/circle_man.svg)
+  background-repeat: no-repeat
+  background-size: 400px 400px
+  background-position: 90% 50%
+  @include respond-to(small-desktop)
+    background-size: 200px 200px
+  @include respond-to(tablet-portrait)
+    background-size: 100px 100px
+  &__container
+    display: flex
+    align-items: center
+    height: 224px
+    @include respond-to(tablet-portrait)
+      height: 150px
+  &__title
+    @include jumbotron-title
+    margin: 0
+    padding: 24px 0 38px 0
+    color: #fff
+    max-width: 620px
+
+.article
+  width: 760px
+  margin: 0 auto
+  padding-top: 90px
+  padding-bottom: 90px
+  background: #fff
+  @include respond-to(middle-desktop)
+    padding-top: 50px
+    padding-bottom: 50px
+  @include respond-to(small-desktop)
+    width: 600px
+  @include respond-to(tablet-portrait)
+    padding-top: 30px
+    padding-bottom: 30px
+  &__title
+    font-family: 'IBMPlexSans-Bold',Arial,sans-serif
+    font-weight: 700
+    font-size: 34px
+    margin: 0
+    line-height: 1.35
+    margin-bottom: 90px
+    @include respond-to(middle-desktop)
+      margin-bottom: 30px
+    @include respond-to(tablet-portrait)
+      font-size: 30px
+  &__text
+    @include regular-text
+    margin: 0 0 30px
+    &:last-child
+      margin-bottom: 0px
+
+.contacts
+  background-color: #fcb614
+  &__container
+    padding-top: 120px
+    padding-bottom: 120px
+    @include respond-to(middle-desktop)
+      padding-top: 100px
+      padding-bottom: 100px
+  &__text
+    display: block
+    text-align: center
+    font-size: 30px
+    line-height: 1.55
+    margin-bottom: 5px
+  &__email
+    display: block
+    text-align: center
+    font-size: 34px
+    line-height: 1.55
+    font-family: 'IBMPlexSans-Bold',Arial,sans-serif
+    font-weight: 700
+    margin-top: 30px
+    @include respond-to(tablet-portrait)
+      font-size: 30px

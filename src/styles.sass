@@ -1,0 +1,53 @@
+@import '~normalize.css'
+@import './assets/styles/variables'
+
+@font-face
+	font-family: "IBMPlexSans-Regular"
+	font-style: normal
+	font-weight: 400
+	src: url("assets/fonts/IBMPlexSans-Regular.ttf")
+
+
+@font-face
+	font-family: "IBMPlexSans-Medium"
+	font-style: normal
+	font-weight: 500
+	src: url("assets/fonts/IBMPlexSans-Medium.ttf")
+
+
+@font-face
+	font-family: "IBMPlexSans-SemiBold"
+	font-style: normal
+	font-weight: 600
+	src: url("assets/fonts/IBMPlexSans-SemiBold.ttf")
+
+
+@font-face
+	font-family: "IBMPlexSans-Bold"
+	font-style: normal
+	font-weight: 700
+	src: url("assets/fonts/IBMPlexSans-Bold.ttf")
+
+*
+  font-family: 'IBMPlexSans-Regular', Arial, sans-serif
+  font-weight: 400
+  color: #000
+
+.container
+  margin: 0 auto
+  max-width: 1200px
+  box-sizing: border-box
+  padding: 0 20px
+  @include respond-to(middle-desktop)
+    padding: 0 40px
+  @include respond-to(small-desktop)
+    max-width: $small-desktop
+  @include respond-to(tablet-landscape)
+    max-width: $tablet-landscape
+  @include respond-to(tablet-portrait)
+    max-width: $tablet-portrait
+  @include respond-to(mobile-landscape)
+    max-width: $mobile-landscape
+    padding: 0 15px
+  @include respond-to(mobile-portrait)
+    width: 100%

@@ -1,0 +1,71 @@
+// Media query screen sizes
+$mobile-portrait: 320px
+$mobile-landscape: 480px
+$tablet-portrait: 600px
+$tablet-landscape: 768px
+$small-desktop: 960px
+$middle-desktop: 1024px
+$large-desktop: 1180px
+
+@mixin regular-text
+  font-size: 20px
+  line-height: 1.55
+  @include respond-to(tablet-portrait)
+  font-size: 18px
+
+@mixin title
+  font-size: 42px
+  line-height: 1.23
+  font-family: 'IBMPlexSans-SemiBold', Arial, sans-serif
+  font-weight: 600
+  @include respond-to(middle-desktop)
+    font-size: 38px
+  @include respond-to(tablet-portrait)
+    font-size: 30px
+
+@mixin section-title
+  font-size: 46px
+  font-family: 'IBMPlexSans-Bold',Arial,sans-serif
+  line-height: 1.55
+  font-weight: 700
+  @include respond-to(middle-desktop)
+    font-size: 40px
+  @include respond-to(tablet-landscape)
+    font-size: 38px
+  @include respond-to(tablet-portrait)
+    font-size: 30px
+
+@mixin jumbotron-title
+  font-size: 52px
+  font-weight: 700
+  font-family: 'IBMPlexSans-Bold',Arial,sans-serif
+  letter-spacing: .5px
+  @include respond-to(middle-desktop)
+    font-size: 46px
+  @include respond-to(tablet-landscape)
+    font-size: 38px
+  @include respond-to(tablet-portrait)
+    font-size: 30px
+
+@mixin respond-to($media)
+  @if $media == mobile-portrait
+    @media only screen and (max-width: $mobile-landscape - 1)
+      @content
+  @else if $media == mobile-landscape
+    @media only screen and (max-width: $tablet-portrait - 1)
+      @content
+  @else if $media == tablet-portrait
+    @media only screen and (max-width: $tablet-landscape - 1)
+      @content
+  @else if $media == tablet-landscape
+    @media only screen and (max-width: $small-desktop - 1)
+      @content
+  @else if $media == small-desktop
+    @media only screen and (max-width: $middle-desktop - 1)
+      @content
+  @else if $media == middle-desktop
+    @media only screen and (max-width: $large-desktop - 1)
+      @content
+  @else if $media == large-desktop
+    @media only screen and (min-width: $large-desktop)
+      @content
