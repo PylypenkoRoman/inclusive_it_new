@@ -37,7 +37,7 @@ export class HomeComponent implements OnInit {
   media = [
     {
       image: '../../../../../assets/images/media_1.jpg',
-      imageDescription: 'Зображена піктограмма компn\'ютера',
+      imageDescription: 'На фото зображений засновник Inclusive IT Роман Боренько під час презентації',
       title: 'IT-волонтери: як у Львові організували ІТ-курси для незрячих та популяризують вебдоступність',
       // tslint:disable-next-line:max-line-length
       text: 'Ми у виданні Dou.ua. Cпівзасновник Inclusive IT Роман Боренько відповідає на питання «Чи можуть незрячі люди навчитись програмувати та працювати в IT?»',
@@ -45,7 +45,7 @@ export class HomeComponent implements OnInit {
     },
     {
       image: '../../../../../assets/images/media_2.jpg',
-      imageDescription: 'Зображена піктограмма компn\'ютера',
+      imageDescription: 'На фото зображена зустріч людей, що обговорюють тему доступності',
       title: 'Портрети інклюзивного IT. Будь як Андрій',
       // tslint:disable-next-line:max-line-length
       text: 'Ми у виданні Na Chasi. Як зробити можливості IT-компаній та розробок інклюзивними, розповідає Роман Боренько — засновник спільноти Inclusive IT',
@@ -53,7 +53,7 @@ export class HomeComponent implements OnInit {
     },
     {
       image: '../../../../../assets/images/media_3.png',
-      imageDescription: 'Зображена піктограмма компn\'ютера',
+      imageDescription: 'На фото зображена зустріч людей, що обговорюють тему доступності',
       title: 'Досягнення та плани українського інклюзивного ІТ',
       text: 'Ми у виданні Na Chasi. Розповідаємо про послуги, що надає наше соціальне підприємство',
       readMoreLink: 'https://nachasi.com/2019/11/28/inclusive-it/'
